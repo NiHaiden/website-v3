@@ -81,7 +81,7 @@
   }
 
   .bgimg {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('/bgimg.JPG');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('/bgimg.JPG');
     width: 100%;
     min-height: 100vh;
     background-attachment: fixed;

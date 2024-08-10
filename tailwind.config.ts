@@ -22,6 +22,7 @@ const config = {
         "nh-darkblue": "#0A4059",
         "nh-notsodarkblue": "#3274A0",
         "nh-lightblue": "#40A5FE",
+        "nh-carolinablue": "#6EB0C9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

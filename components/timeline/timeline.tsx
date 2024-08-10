@@ -28,7 +28,8 @@ const TimelineTime = React.forwardRef<
 	<p
 		ref={ref}
 		className={cn(
-			"absolute translate-x-36 md:-translate-x-24 text-sm font-semibold leading-none text-secondary-foreground",
+			"absolute translate-x-36 md:-translate-x-24 text-sm font-semibold leading-none text-white" +
+			"",
 			className,
 		)}
 		{...props}
@@ -43,7 +44,7 @@ const TimelineConnector = React.forwardRef<
 	<div
 		ref={ref}
 		className={cn(
-			"absolute top-[5px] left-[30px] -translate-x-1/2 translate-y-2 h-full w-px bg-primary",
+			"absolute top-[5px] left-[30px] -translate-x-1/2 translate-y-2 h-full w-px bg-white",
 			className,
 		)}
 		{...props}
@@ -57,7 +58,7 @@ const TimelineHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<div
 		ref={ref}
-		className={cn("flex items-center gap-4", className)}
+		className={cn("flex flex-row items-center gap-4", className)}
 		{...props}
 	/>
 ));
@@ -70,7 +71,7 @@ const TimelineTitle = React.forwardRef<
 	<h3
 		ref={ref}
 		className={cn(
-			"font-semibold leading-none tracking-tight text-secondary-foreground",
+			"font-semibold text-white leading-none tracking-tight",
 			className,
 		)}
 		{...props}>
@@ -85,7 +86,7 @@ const TimelineIcon = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<div
 		ref={ref}
-		className={cn("flex flex-col size-3 bg-primary rounded-full", className)}
+		className={cn("flex flex-col size-3 bg-white rounded-full", className)}
 		{...props}
 	/>
 ));
@@ -97,7 +98,7 @@ const TimelineDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<p
 		ref={ref}
-		className={cn("text-sm text-muted-foreground max-w-sm", className)}
+		className={cn("text-sm text-white max-w-sm", className)}
 		{...props}
 	/>
 ));
