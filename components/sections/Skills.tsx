@@ -1,5 +1,5 @@
 import {Globe, Server} from "lucide-react";
-
+import JavaPlain from 'devicons-react/lib/icons/JavaPlain';
 export default function Skills() {
     return (
         <div className={"w-full h-full flex flex-col gap-6 justify-center items-center"}>
@@ -15,6 +15,7 @@ export default function Skills() {
                             <li>NodeJS</li>
                             <li>React, NextJS</li>
                             <li>HTML, CSS, Java-/Typescript</li>
+                            <JavaPlain color={"#fff"} size={48}/>
                         </ul>
                     </div>
                     <div
