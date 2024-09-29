@@ -1,11 +1,11 @@
 export default function AboutMe() {
     return (
-        <div className={"w-full h-full flex justify-center items-center flex-col gap-3"}>
-            <div className={"w-3/4 flex flex-col gap-3"}>
-                <div
-                    className={"text-7xl bg-clip-text bg-gradient-to-br font-semibold text-transparent from-nh-darkblue to-nh-lightblue text-center"}>About
-                    me
-                </div>
+        <div className={"w-full h-full flex justify-center items-center flex-col gap-3 "}>
+            <div className={"w-3/4 flex flex-col gap-3 py-32"}>
+                <code
+                    className={"text-7xl bg-clip-text bg-gradient-to-br font-semibold text-transparent from-nh-darkblue to-nh-lightblue text-center"}>
+                    /home/about-me.md
+                </code>
                 <div className={"text-left text-nh-darkblue text-2xl font-medium"}>
                     I've been obsessed with computers since my early age.
                     What started out with the simple things, like sending an E-Mail or destroying the installed OS on a

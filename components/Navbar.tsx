@@ -43,7 +43,7 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
 
                     </div>
                     <div className='flex flex-row gap-14 text-lg items-center justify-center'>
-                    <button onClick={() => {
+                        <button onClick={() => {
                             endUserRef.current.scrollIntoView({
                                 behavior: 'smooth',
                                 block: "start"
@@ -89,9 +89,9 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                         });
                         closeNavbar();
                     }}>
-                        <img src={"/aurora_v2_logo.svg"} width={60} height={60}
+                        <img src={"/logo.svg"} width={60} height={60}
                              className={`${isTop ? 'hidden' : 'block'}`}/>
-                        <img src={"/aurora_text_logo.svg"} width={100} height={100}
+                        <img src={"/logo.svg"} width={50} height={50}
                              className={`${isTop ? 'block' : 'hidden'}`}/>
                     </div>
                     <div className={"flex flex-row gap-3"}>
@@ -99,22 +99,9 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                         <button
                             className='text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
                             type='button'
-                            onClick={() => {
-                                downloadRef.current.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: "start"
-                                });
-                                closeNavbar();
-                            }}
-                        >
-                            <DownloadIcon width={30} height={30}/>
-                        </button>
-                        <button
-                            className='text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
-                            type='button'
                             onClick={() => setNavbarOpen(!navbarOpen)}
                         >
-                            <MenuIcon className={"text-nh-darkblue"} width={30} height={30}/>
+                            <MenuIcon className={"text-white"} width={30} height={30}/>
                         </button>
                     </div>
                 </div>
@@ -143,7 +130,6 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                                 </button>
                                 <button onClick={() => {
                                     developerRef.current.scrollIntoView({
-
                                         behavior: 'smooth',
                                         block: "start"
                                     });

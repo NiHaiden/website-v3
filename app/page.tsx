@@ -9,21 +9,20 @@ import CustomTimeline from "@/components/custom-timeline";
 
 export default function Home() {
     return (
-        <main>
-            <div className={""}>
+        <main className={"w-full h-full flex flex-col"}>
+            <div className={"h-fit"}>
                 <Hero/>
             </div>
-            <div className={"w-full lg:h-screen h-fit pt-64 grid lg:grid-cols-2 gap-14 lg:gap-0 grid-cols-1"}>
+            <div className={"w-full lg:h-screen h-fit grid lg:grid-cols-2 gap-14 lg:gap-0 grid-cols-1"}>
                 <AboutMe/>
-                <Skills/>
+                <TimelineSection/>
             </div>
-            <div className={"w-full h-screen grid lg:grid-cols-2 grid-cols-1"}>
+            <div className={"w-full h-fit lg:mb-0 mb-24 grid lg:grid-cols-2 grid-cols-1"}>
                 <Projects/>
                 <Skills/>
             </div>
-            <div className={"w-full h-screen bgimg flex justify-center items-center"}>
+            <div className={"w-full h-screen bgimg flex justify-center items-center py-32"}>
                 <Contact/>
-                <CustomTimeline/>
             </div>
         </main>
     );
