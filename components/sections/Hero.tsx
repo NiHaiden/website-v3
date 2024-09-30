@@ -7,7 +7,7 @@ export default function Hero({heroRef}: {heroRef: RefObject<any>}) {
                 className={"bgimg flex justify-center items-center min-h-[100vh] bg-top lg:bg-center lg:h-screen w-full"}>
                 <div className={"w-full text-white flex lg:justify-center lg:items-center flex-col p-14 gap-3"}>
                     <div
-                        className={"lg:w-1/2 w-full text-white drop-shadow-lg font-extrabold text-5xl lg:text-8xl flex flex-col lg:flex-row justify-start items-start"}>
+                        className={"lg:w-1/2 w-full text-white drop-shadow-lg font-extrabold text-5xl lg:text-7xl flex flex-col justify-start items-start"}>
                         <span>Hi, I am</span>
                         <code>/home/niklas!</code>
                     </div>
