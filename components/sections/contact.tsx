@@ -5,7 +5,7 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import {sendEmail} from "@/lib/email/email";
-import {useState} from "react";
+import {RefObject, useState} from "react";
 import {
     AlertDialog, AlertDialogAction, AlertDialogCancel,
     AlertDialogContent,
@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import {Dialog, DialogContent, DialogHeader, DialogDescription} from "@/components/ui/dialog";
 
-export function Contact() {
+export function Contact({contactRef}: { contactRef: RefObject<any> }) {
 
     const [errorDialogOpen, setErrorDialogOpen] = useState(false);
     const [successDialogOpen, setSuccessDialogOpen] = useState(false);
@@ -34,8 +34,8 @@ export function Contact() {
     }
 
     return (
-        <div
-            className={"w-full lg:w-2/3 h-full lg:h-fit text-2xl font-medium text-white p-10 lg:rounded-3xl flex flex-col gap-4 bg-black backdrop-blur-3xl bg-opacity-20 shadow-lg"}>
+        <div ref={contactRef}
+             className={"w-full lg:w-2/3 h-full lg:h-fit text-2xl font-medium text-white p-10 lg:rounded-3xl flex flex-col gap-4 bg-black backdrop-blur-3xl bg-opacity-20 shadow-lg"}>
             <h1 className={"text-7xl font-bold"}>Contact</h1>
             <p className={"text-lg font-medium text-white"}>Want to shoot me a message? Type it in the box below!</p>
             <form className={"flex flex-col gap-5"} action={handleSubmit}>
@@ -56,7 +56,7 @@ export function Contact() {
                     <Textarea className={"rounded-2xl bg-transparent"} name={"message"}/>
                 </div>
                 <Dialog open={errorDialogOpen} onOpenChange={(open: boolean) => setErrorDialogOpen(open)}>
-                    <DialogContent>
+                    <DialogContent title={"Error Message about not being able to send mail"}>
                         <DialogHeader>
                             Something went wrong.
                         </DialogHeader>

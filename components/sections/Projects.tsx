@@ -1,8 +1,9 @@
 import {ProjectCard} from "@/components/ProjectCard";
+import {Ref, RefObject} from "react";
 
-export default function Projects() {
+export default function Projects({projectRef}: {projectRef: RefObject<any>} ) {
     return (
-        <div className={"w-full"}>
+        <div ref={projectRef} className={"w-full"}>
             <div className={"w-full h-full flex flex-col gap-6 justify-center items-center bg-gradient-to-br from-nh-darkblue to-nh-carolinablue py-32"}>
                 <code
                     className={" text-5xl font-semibold text-white text-center"}>

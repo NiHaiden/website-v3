@@ -1,6 +1,8 @@
-export default function AboutMe() {
+import {Ref, RefObject} from "react";
+
+export default function AboutMe({aboutMeRef}: {aboutMeRef: RefObject<any>}) {
     return (
-        <div className={"w-full h-full flex justify-center items-center flex-col gap-3 "}>
+        <div ref={aboutMeRef} className={"w-full h-full flex justify-center items-center flex-col gap-3 "}>
             <div className={"w-3/4 flex flex-col gap-3 py-32"}>
                 <code
                     className={"text-7xl bg-clip-text bg-gradient-to-br font-semibold text-transparent from-nh-darkblue to-nh-lightblue text-center"}>

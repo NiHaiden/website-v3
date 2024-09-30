@@ -13,6 +13,7 @@ import {
 import SpringIcon from "@/components/SpringIcon";
 import TailwindIcon from "@/components/TailwindIcon";
 import ReactIcon from "@/components/icons/ReactIcon";
+import {RefObject} from "react";
 
 const skills = [
     {
@@ -57,9 +58,9 @@ const skills = [
     }
 ]
 
-export default function Skills() {
+export default function Skills({skillsRef}: {skillsRef: RefObject<any>}) {
     return (
-        <div className={"w-full h-full flex flex-col gap-6 justify-center items-center py-32"}>
+        <div ref={skillsRef} className={"w-full h-full flex flex-col gap-6 justify-center items-center py-32"}>
             <div className={"lg:w-2/4 w-full lg:p-0 p-5 flex flex-col gap-4 lg:mt-10 items-center justify-center"}>
                 <code
                     className={"text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-nh-notsodarkblue to-nh-carolinablue"}>

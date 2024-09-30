@@ -4,12 +4,13 @@ import React, {RefObject, useEffect, useState} from 'react';
 import {Transition} from '@headlessui/react';
 import {DownloadIcon, MenuIcon} from "lucide-react";
 
-const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
-    introRef: RefObject<any>;
-    endUserRef: RefObject<any>;
-    developerRef: RefObject<any>;
-    faqRef: RefObject<any>;
-    downloadRef: RefObject<any>;
+
+const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
+    heroRef: RefObject<any>
+    aboutMeRef: RefObject<any>;
+    skillsRef: RefObject<any>;
+    projectsRef: RefObject<any>;
+    contactRef: RefObject<any>;
 }) => {
     const [isTop, setIsTop] = useState(true);
     const [navbarOpen, setNavbarOpen] = useState(false);
@@ -25,6 +26,42 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
         setNavbarOpen(false);
     }
 
+    const navbarButtons: React.ReactNode[] = [
+        <button onClick={() => {
+            aboutMeRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: "start"
+            });
+            closeNavbar();
+        }}>About me
+        </button>,
+        <button onClick={() => {
+            projectsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: "start"
+            });
+            closeNavbar();
+        }}>My projects
+        </button>,
+        <button onClick={() => {
+            skillsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: "start"
+            });
+            closeNavbar();
+        }}>Skills
+        </button>,
+
+        <button onClick={() => {
+            contactRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: "start"
+            });
+            closeNavbar();
+        }}>Contact
+        </button>
+    ]
+
     return (
         <nav
             className={`fixed w-full z-30 top-0 text-white transition duration-300 ease-in-out  ${isTop ? 'bg-black backdrop-blur-3xl bg-opacity-30' : 'bg-nh-darkblue shadow-xl'}`}>
@@ -32,58 +69,7 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                 <div
                     className='hidden lg:flex w-full font-medium text-white mb-4 md:mb-0 flex-row items-center justify-between gap-4'>
                     <div className={"cursor-pointer"} onClick={() => {
-                        introRef.current.scrollIntoView({
-                            behavior: 'smooth',
-                            block: "start"
-                        });
-                        closeNavbar();
-                    }}>
-                        <img src={"/logo.svg"} width={50} height={50}
-                             className={`${isTop ? 'block' : 'block'}`}/>
-
-                    </div>
-                    <div className='flex flex-row gap-14 text-lg items-center justify-center'>
-                        <button onClick={() => {
-                            endUserRef.current.scrollIntoView({
-                                behavior: 'smooth',
-                                block: "start"
-                            });
-                            closeNavbar();
-                        }}>About me
-                        </button>
-                        <button onClick={() => {
-                            developerRef.current.scrollIntoView({
-                                behavior: 'smooth',
-                                block: "start"
-                            });
-                            closeNavbar();
-                        }}>My timeline
-                        </button>
-                        <button onClick={() => {
-                            faqRef.current.scrollIntoView({
-                                behavior: 'smooth',
-                                block: "start"
-                            });
-                            closeNavbar();
-                        }}>Projects
-                        </button>
-                    </div>
-                    <div className={"flex flex-row text-lg items-center justify-center"}>
-                        <button
-                            className={"hidden lg:inline-flex gap-2 bg-gradient-to-br from-nh-darkblue to-nh-darkblue p-3 rounded-xl shadow-xl"}
-                            onClick={() => {
-                                downloadRef.current.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: "start"
-                                });
-                                closeNavbar();
-                            }}><DownloadIcon/> Get my CV
-                        </button>
-                    </div>
-                </div>
-                <div className={"w-full flex flex-row justify-between items-center lg:hidden"}>
-                    <div className={"cursor-pointer"} onClick={() => {
-                        introRef.current.scrollIntoView({
+                        heroRef.current.scrollIntoView({
                             behavior: 'smooth',
                             block: "start"
                         });
@@ -94,8 +80,41 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                         <img src={"/logo.svg"} width={50} height={50}
                              className={`${isTop ? 'block' : 'hidden'}`}/>
                     </div>
-                    <div className={"flex flex-row gap-3"}>
 
+
+                    <div className='flex flex-row gap-14 text-lg items-center justify-center'>
+                        {navbarButtons.map((navbarButton, index) => (
+                            <div key={index}>
+                                {navbarButton}
+                            </div>
+                        ))}
+                    </div>
+                    <div className={"flex flex-row text-lg items-center justify-center"}>
+                        <a target={"_blank"}
+                           href={"https://appw.niklas.tech/v1/storage/buckets/66539361000d192b26d6/files/665393750013f971621f/view?project=66539355000b7b0b757b&mode=admin"}
+                           className={"hidden lg:inline-flex gap-2 bg-gradient-to-br from-nh-lightblue to-nh-notsodarkblue p-3 rounded-xl shadow-xl"}
+                        ><DownloadIcon/> Get my CV
+                        </a>
+                    </div>
+                </div>
+                <div className={"w-full flex flex-row justify-between items-center lg:hidden"}>
+                    <div className={"cursor-pointer"} onClick={() => {
+                        heroRef.current.scrollIntoView({
+                            behavior: 'smooth',
+                            block: "start"
+                        });
+                        closeNavbar();
+                    }}>
+                        <img src={"/logo.svg"} width={60} height={60}
+                             className={`${isTop ? 'hidden' : 'block'}`}/>
+                        <img src={"/logo.svg"} width={50} height={50}
+                             className={`${isTop ? 'block' : 'hidden'}`}/>
+                    </div>
+                    <div className={"flex flex-row gap-3 items-center"}>
+                        <a target={"_blank"} title={"Download my CV"}
+                           href={"https://appw.niklas.tech/v1/storage/buckets/66539361000d192b26d6/files/665393750013f971621f/view?project=66539355000b7b0b757b&mode=admin"}>
+                            <DownloadIcon size={30}/>
+                        </a>
                         <button
                             className='text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none'
                             type='button'
@@ -107,7 +126,6 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                 </div>
                 <Transition
                     show={navbarOpen}
-                    className={"w-full text-nh-darkblue"}
                     enter='transition ease-out duration-100 transform'
                     enterFrom='opacity-0 scale-95'
                     enterTo='opacity-100 scale-100'
@@ -115,35 +133,15 @@ const Navbar = ({introRef, endUserRef, developerRef, faqRef, downloadRef}: {
                     leaveFrom='opacity-100 scale-100'
                     leaveTo='opacity-0 scale-95'
                 >
-                    {(ref) => (
+                    {(ref: RefObject<any>) => (
                         <div ref={ref} className='lg:flex flex-grow items-center rounded-2xl mt-5 bg-aurora-purple '
                              id='example-navbar-warning'>
                             <div className='w-full flex flex-col gap-14 p-10 text-lg items-center justify-center'>
-
-                                <button onClick={() => {
-                                    endUserRef.current.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: "start"
-                                    });
-                                    closeNavbar();
-                                }}>For end-users
-                                </button>
-                                <button onClick={() => {
-                                    developerRef.current.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: "start"
-                                    });
-                                    closeNavbar();
-                                }}>For developers
-                                </button>
-                                <button onClick={() => {
-                                    faqRef.current.scrollIntoView({
-                                        behavior: 'smooth',
-                                        block: "start"
-                                    });
-                                    closeNavbar();
-                                }}>FAQ
-                                </button>
+                                {navbarButtons.map((navbarButton, index) => (
+                                    <div key={index}>
+                                        {navbarButton}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     )}
