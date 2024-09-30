@@ -14,7 +14,7 @@ export function TimelineSection() {
     return (
         <div
             className={"lg:m-0 mt-14 w-full bg-gradient-to-tr from-nh-notsodarkblue to-nh-lightblue gap-5 flex flex-col justify-center items-center py-32"}>
-            <code className={"text-5xl font-extrabold text-white text-center"}>/usr/timeline.sh</code>
+            <code className={"text-3xl lg:text-5xl font-extrabold text-white text-center"}>/usr/timeline.sh</code>
             <CustomTimeline/>
         </div>
     )

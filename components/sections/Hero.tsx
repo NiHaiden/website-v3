@@ -9,7 +9,7 @@ export default function Hero({heroRef}: {heroRef: RefObject<any>}) {
                     <div
                         className={"lg:w-1/2 w-full text-white drop-shadow-lg font-extrabold text-5xl lg:text-7xl flex flex-col justify-start items-start"}>
                         <span>Hi, I am</span>
-                        <code>/home/niklas!</code>
+                        <code className={"text-3xl lg:text-7xl"}>/home/niklas!</code>
                     </div>
                     <div className={"w-full lg:w-1/2 font-medium text-xl lg:text-4xl"}>Living near the Austrian alps in
                         the city of Vienna, I

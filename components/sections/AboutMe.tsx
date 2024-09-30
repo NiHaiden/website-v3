@@ -5,7 +5,7 @@ export default function AboutMe({aboutMeRef}: {aboutMeRef: RefObject<any>}) {
         <div ref={aboutMeRef} className={"w-full h-full flex justify-center items-center flex-col gap-3 "}>
             <div className={"w-3/4 flex flex-col gap-3 py-32"}>
                 <code
-                    className={"text-7xl bg-clip-text bg-gradient-to-br font-semibold text-transparent from-nh-darkblue to-nh-lightblue text-center"}>
+                    className={"text-4xl lg:text-7xl bg-clip-text bg-gradient-to-br font-semibold text-transparent from-nh-darkblue to-nh-lightblue text-center"}>
                     /home/about-me.md
                 </code>
                 <div className={"text-left text-nh-darkblue text-2xl font-medium"}>
