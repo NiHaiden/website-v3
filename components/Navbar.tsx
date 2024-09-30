@@ -27,7 +27,7 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
     }
 
     const navbarButtons: React.ReactNode[] = [
-        <button onClick={() => {
+        <button key={1} onClick={() => {
             aboutMeRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: "start"
@@ -35,7 +35,7 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
             closeNavbar();
         }}>About me
         </button>,
-        <button onClick={() => {
+        <button key={2} onClick={() => {
             projectsRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: "start"
@@ -43,7 +43,7 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
             closeNavbar();
         }}>My projects
         </button>,
-        <button onClick={() => {
+        <button key={3} onClick={() => {
             skillsRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: "start"
@@ -52,7 +52,7 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
         }}>Skills
         </button>,
 
-        <button onClick={() => {
+        <button key={4} onClick={() => {
             contactRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: "start"
@@ -105,10 +105,12 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
                         });
                         closeNavbar();
                     }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={"/logo.svg"} width={60} height={60}
-                             className={`${isTop ? 'hidden' : 'block'}`}/>
+                             className={`${isTop ? 'hidden' : 'block'}`} alt={"Logo from Niklas Haiden"}/>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src={"/logo.svg"} width={50} height={50}
-                             className={`${isTop ? 'block' : 'hidden'}`}/>
+                             className={`${isTop ? 'block' : 'hidden'}`} alt={"Logo from Niklas Haiden"}/>
                     </div>
                     <div className={"flex flex-row gap-3 items-center"}>
                         <a target={"_blank"} title={"Download my CV"}
