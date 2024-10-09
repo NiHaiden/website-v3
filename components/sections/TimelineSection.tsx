@@ -61,9 +61,7 @@ export function TimelineSectionOld() {
                         <TimelineTitle>Software Engineer at <a href={"https://patentamt.at"}>Austrian Patent Office</a></TimelineTitle>
                     </TimelineHeader>
                     <TimelineContent>
-                        <TimelineDescription>Various duties include the development and deployment of internal tools to
-                            help around the organization in their tasks and developing a sucessor to the See-IP System
-                            where people can view trademarks and patents.</TimelineDescription>
+                        <TimelineDescription>Various duties include the development and deployment of internal tools and external tools for customers. Tech Stack used is React, Java and other relevant web technologies.</TimelineDescription>
                     </TimelineContent>
                 </TimelineItem>
             </Timeline>
