@@ -91,7 +91,7 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
                     </div>
                     <div className={"flex flex-row text-lg items-center justify-center"}>
                         <a target={"_blank"}
-                           href={"https://appw.niklas.tech/v1/storage/buckets/66539361000d192b26d6/files/665393750013f971621f/view?project=66539355000b7b0b757b&mode=admin"}
+                           href={"https://appw.niklas.tech/v1/storage/buckets/66539361000d192b26d6/files/6768a688002b025a0ae1/view?project=66539355000b7b0b757b&mode=admin"}
                            className={"hidden lg:inline-flex gap-2 bg-gradient-to-br from-nh-lightblue to-nh-notsodarkblue p-3 rounded-xl shadow-xl"}
                         ><DownloadIcon/> Get my CV
                         </a>
