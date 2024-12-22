@@ -114,7 +114,7 @@ const Navbar = ({heroRef, aboutMeRef, skillsRef, projectsRef, contactRef}: {
                     </div>
                     <div className={"flex flex-row gap-3 items-center"}>
                         <a target={"_blank"} title={"Download my CV"}
-                           href={"https://appw.niklas.tech/v1/storage/buckets/66539361000d192b26d6/files/665393750013f971621f/view?project=66539355000b7b0b757b&mode=admin"}>
+                           href={"https://appw.niklas.tech/v1/storage/buckets/66539361000d192b26d6/files/6768a688002b025a0ae1/view?project=66539355000b7b0b757b&mode=admin"}>
                             <DownloadIcon size={30}/>
                         </a>
                         <button
