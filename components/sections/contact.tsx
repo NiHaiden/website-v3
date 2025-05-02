@@ -1,20 +1,26 @@
 "use client";
 
 
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Button} from "@/components/ui/button";
-import {sendEmail} from "@/lib/email/email";
-import {RefObject, useState} from "react";
-import {
-    AlertDialog, AlertDialogAction, AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription, AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle
-} from "@/components/ui/alert-dialog";
-import {Dialog, DialogContent, DialogHeader, DialogDescription} from "@/components/ui/dialog";
+import {RefObject} from "react";
+import {GithubIcon} from "lucide-react";
 
+
+export function Contact({contactRef}: { contactRef: RefObject<any> }) {
+    return (
+        <div ref={contactRef}
+             className={"w-full h-dvh lg:w-2/3 h-full lg:h-fit text-2xl font-medium text-white p-10 lg:rounded-3xl flex flex-col gap-4 bg-black backdrop-blur-3xl bg-opacity-20 shadow-lg"}>
+            <h1 className={"text-7xl font-bold"}>Contact</h1>
+            Want to contact me? <br/>
+            You can reach me via this E-Mail Address: <a href={"mailto:me@nhaiden.io"} className={"underline underline-offset-4"}>me@nhaiden.io</a>
+            Or checkout my Github where I contribute to open source projects in my free time! <br/>
+            <a href={"https://github.com/NiHaiden"}
+               className={"flex flex-row items-center text-3xl underline underline-offset-4"}><GithubIcon
+                size={48}/> GitHub Link</a>
+        </div>
+    )
+}
+
+/*
 export function Contact({contactRef}: { contactRef: RefObject<any> }) {
 
     const [errorDialogOpen, setErrorDialogOpen] = useState(false);
@@ -82,4 +88,4 @@ export function Contact({contactRef}: { contactRef: RefObject<any> }) {
             </form>
         </div>
     )
-}
+}*/

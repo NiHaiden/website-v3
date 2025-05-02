@@ -33,7 +33,7 @@ export default function Home() {
                     <Projects projectRef={projectRef}/>
                     <Skills skillsRef={skillsRef}/>
                 </div>
-                <div className={"w-full h-screen bgimg flex justify-center items-center py-32"}>
+                <div className={"w-full h-dvh bgimg flex justify-center items-center py-32"}>
                     <Contact contactRef={contactRef}/>
                 </div>
             </main>
