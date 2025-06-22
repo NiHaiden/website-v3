@@ -13,7 +13,7 @@ export default function Projects({projectRef}: {projectRef: RefObject<any>} ) {
                     <ProjectCard projectTitle={"Raven"} projectDescription={"Raven is an experiment of mine to build a personal PaaS platform, similar to Heroku or other services to deploy dockerized apps easily via a web interface or API. Currently work in progress."}/>
                     <ProjectCard projectTitle={"Shelly Plug Exporter"} projectDescription={"A small webapplication to export Shelly Plugs to Prometheus with a nice GUI. Coming soon."}/>
 
-                    <ProjectCard link={"https://getaurora.dev"} projectTitle={"Aurora"} projectDescription={"Aurora was born out of the need for a seamless Linux workstation experience with a beautiful desktop and every developer tool preinstalled, paired with unmatched stability. It is the ultimate developer workstation."}/>
+                    <ProjectCard link={"https://getaurora.dev"} projectTitle={"Aurora"} projectDescription={"A beautiful KDE desktop experience powered by Universal-Blue and the ultimate workstation for everyone."}/>
                 </div>
             </div>
         </div>
