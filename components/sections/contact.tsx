@@ -1,91 +1,55 @@
-"use client";
+import Image from "next/image";
+import { GithubIcon, MailIcon } from "lucide-react";
 
+export function Contact() {
+  return (
+    <section
+      id="contact"
+      className="relative min-h-screen flex justify-center items-center overflow-hidden"
+    >
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/bgimg.JPG"
+          alt=""
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
 
-import {RefObject} from "react";
-import {GithubIcon} from "lucide-react";
+      {/* Decorative blur orbs */}
+      <div className="absolute top-1/3 left-10 w-64 h-64 bg-nh-lightblue/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-10 w-72 h-72 bg-nh-notsodarkblue/15 rounded-full blur-[120px] pointer-events-none" />
 
-
-export function Contact({contactRef}: { contactRef: RefObject<any> }) {
-    return (
-        <div ref={contactRef}
-             className={"w-full h-dvh lg:w-2/3 h-full lg:h-fit text-2xl font-medium text-white p-10 lg:rounded-3xl flex flex-col gap-4 bg-black backdrop-blur-3xl bg-opacity-20 shadow-lg"}>
-            <h1 className={"text-7xl font-bold"}>Contact</h1>
-            Want to contact me? <br/>
-            You can reach me via this E-Mail Address: <a href={"mailto:me@nhaiden.io"} className={"underline underline-offset-4"}>me@nhaiden.io</a>
-            Or checkout my Github where I contribute to open source projects in my free time! <br/>
-            <a href={"https://github.com/NiHaiden"}
-               className={"flex flex-row items-center text-3xl underline underline-offset-4"}><GithubIcon
-                size={48}/> GitHub Link</a>
+      {/* Card */}
+      <div className="relative z-10 w-full max-w-2xl mx-6 backdrop-blur-2xl bg-black/40 border border-white/[0.15] rounded-3xl p-8 lg:p-12 shadow-2xl text-white">
+        <h2 className="text-5xl lg:text-6xl font-bold mb-6">Contact</h2>
+        <div className="text-lg lg:text-xl font-medium leading-relaxed space-y-4 text-white/90">
+          <p>
+            Want to contact me? You can reach me via e-mail or check out my
+            GitHub where I contribute to open source projects in my free time!
+          </p>
         </div>
-    )
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <a
+            href="mailto:me@nhaiden.io"
+            className="inline-flex items-center gap-3 bg-gradient-to-br from-nh-lightblue to-nh-notsodarkblue px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-nh-lightblue/20 hover:scale-105 transition-all duration-200"
+          >
+            <MailIcon size={22} />
+            me@nhaiden.io
+          </a>
+          <a
+            href="https://github.com/NiHaiden"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 backdrop-blur-lg bg-white/10 border border-white/20 px-6 py-3 rounded-xl font-medium hover:bg-white/20 hover:scale-105 transition-all duration-200"
+          >
+            <GithubIcon size={22} />
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-/*
-export function Contact({contactRef}: { contactRef: RefObject<any> }) {
-
-    const [errorDialogOpen, setErrorDialogOpen] = useState(false);
-    const [successDialogOpen, setSuccessDialogOpen] = useState(false);
-
-    async function handleSubmit(formData: FormData) {
-        console.log(formData);
-        const result = await sendEmail(formData);
-
-        if ("message" in result! && "errorCode" in result!) {
-            setErrorDialogOpen(!errorDialogOpen);
-            setSuccessDialogOpen(false);
-            return;
-        } else {
-            setSuccessDialogOpen(true);
-        }
-    }
-
-    return (
-        <div ref={contactRef}
-             className={"w-full lg:w-2/3 h-full lg:h-fit text-2xl font-medium text-white p-10 lg:rounded-3xl flex flex-col gap-4 bg-black backdrop-blur-3xl bg-opacity-20 shadow-lg"}>
-            <h1 className={"text-7xl font-bold"}>Contact</h1>
-            <p className={"text-lg font-medium text-white"}>Want to shoot me a message? Type it in the box below!</p>
-            <form className={"flex flex-col gap-5"} action={handleSubmit}>
-                <div className={"flex flex-col gap-5 bg-transparent"}>
-                    <div className={"flex flex-col gap-1"}>
-                        <div>Your E-Mail *</div>
-                        <Input className={"border rounded-2xl border-white bg-transparent"} aria-label="Email"
-                               name="email" type="email"/>
-                    </div>
-                    <div className={"flex flex-col gap-1"}>
-                        <div>Your name</div>
-                        <Input className={"border rounded-2xl border-white bg-transparent"} aria-label="name"
-                               name="senderName" type="text"/>
-                    </div>
-                </div>
-                <div className={"flex flex-col gap-1"}>
-                    <h3 className={"text-2xl"}>Your message</h3>
-                    <Textarea className={"rounded-2xl bg-transparent"} name={"message"}/>
-                </div>
-                <Dialog open={errorDialogOpen} onOpenChange={(open: boolean) => setErrorDialogOpen(open)}>
-                    <DialogContent title={"Error Message about not being able to send mail"}>
-                        <DialogHeader>
-                            Something went wrong.
-                        </DialogHeader>
-                        <DialogDescription>
-                            Something went wrong while trying to send the email. Please try again.
-                        </DialogDescription>
-                    </DialogContent>
-                </Dialog>
-                <AlertDialog open={successDialogOpen}>
-                    <AlertDialogContent>
-                        <AlertDialogHeader>
-                            <AlertDialogTitle>E-Mail successfully sent.</AlertDialogTitle>
-                            <AlertDialogDescription>
-                                Your message was successfully sent to me! I will get back to you asap.
-                            </AlertDialogDescription>
-                        </AlertDialogHeader>
-                        <AlertDialogFooter>
-                            <AlertDialogCancel onClick={() => setSuccessDialogOpen(false)}>Close</AlertDialogCancel>
-                        </AlertDialogFooter>
-                    </AlertDialogContent>
-                </AlertDialog>
-                <Button type={"submit"}>Send</Button>
-            </form>
-        </div>
-    )
-}*/

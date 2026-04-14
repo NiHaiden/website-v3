@@ -4,7 +4,7 @@ type Props = {
 }
 
 
-export default function TailwindIcon({size = 48, color}: Props): JSX.Element {
+export default function TailwindIcon({size = 48, color}: Props) {
     return (
         <svg width={size} height={size} viewBox="0 0 128 128">
             <path
