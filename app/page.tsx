@@ -48,6 +48,34 @@ export default function Home() {
             alt="Niklas Haiden"
             className="mb-1"
           />
+        {/* ── Social links ── */}
+        <div className="flex items-center gap-3">
+          <a
+            href="mailto:me@nhaiden.io"
+            title="Email"
+            className="text-white/40 hover:text-white transition-colors"
+          >
+            <MailIcon size={20} />
+          </a>
+          <a
+            href="https://github.com/NiHaiden"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            className="text-white/40 hover:text-white transition-colors"
+          >
+            <GithubIcon size={20} />
+          </a>
+          <a
+            href="https://niklas.tech/NiklasHaiden_Resume.pdf"
+            target="_blank"
+            title="Download Resume"
+            className="text-white/40 hover:text-white transition-colors"
+          >
+            <DownloadIcon size={20} />
+          </a>
+        </div>
+
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight">
             Niklas Haiden
           </h1>
@@ -107,30 +135,6 @@ export default function Home() {
             <FolderOpenIcon size={16} className="text-white/50" />
             Projects
           </TransitionLink>
-
-          <span className="hidden sm:block w-px h-6 bg-white/10" />
-
-          <a
-            href="mailto:me@nhaiden.io"
-            className="inline-flex items-center gap-2 bg-gradient-to-br from-sky-500 to-blue-600 px-5 py-2.5 rounded-xl text-sm font-medium shadow-lg shadow-sky-500/15 hover:shadow-sky-500/25 hover:scale-[1.02] transition-all"
-          >
-            <MailIcon size={16} /> Contact me
-          </a>
-          <a
-            href="https://github.com/NiHaiden"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass rounded-xl px-5 py-2.5 text-sm font-medium flex items-center gap-2 hover:bg-white/[0.12] transition-colors"
-          >
-            <GithubIcon size={16} /> GitHub
-          </a>
-          <a
-            href="https://niklas.tech/NiklasHaiden_Resume.pdf"
-            target="_blank"
-            className="glass rounded-xl px-5 py-2.5 text-sm font-medium flex items-center gap-2 hover:bg-white/[0.12] transition-colors"
-          >
-            <DownloadIcon size={16} /> Resume
-          </a>
         </div>
       </div>
     </div>
