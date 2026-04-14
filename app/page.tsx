@@ -21,10 +21,9 @@ import {
 
 import JavaPlain from "devicons-react/lib/icons/JavaPlain";
 import {
-  DockerPlain,
-  Html5Plain,
   KotlinPlain,
-  SwiftPlain,
+  PostgresqlPlain,
+  KubernetesPlain,
   TypescriptPlain,
 } from "devicons-react";
 import SpringIcon from "@/components/SpringIcon";
@@ -37,13 +36,13 @@ const skills = [
   { name: "Java", icon: <JavaPlain size={32} color="#fff" /> },
   { name: "React", icon: <ReactIcon size={32} color="#fff" /> },
   { name: "TypeScript", icon: <TypescriptPlain size={32} color="#fff" /> },
-  { name: "HTML / CSS", icon: <Html5Plain size={32} color="#fff" /> },
+
   { name: "Kotlin", icon: <KotlinPlain size={32} color="#fff" /> },
   { name: "Spring", icon: <SpringIcon size={32} color="#fff" /> },
-  { name: "SQL", icon: <DatabaseIcon size={32} color="#fff" /> },
+  { name: "PostgreSQL", icon: <PostgresqlPlain size={32} color="#fff" /> },
+  { name: "Kubernetes", icon: <KubernetesPlain size={32} color="#fff" /> },
   { name: "Tailwind", icon: <TailwindIcon size={32} color="#fff" /> },
-  { name: "Docker", icon: <DockerPlain size={32} color="#fff" /> },
-  { name: "Swift", icon: <SwiftPlain size={32} color="#fff" /> },
+
 ];
 
 const experience = [
@@ -103,16 +102,31 @@ export default function Home() {
             Niklas Haiden
           </h1>
           <p className="text-lg sm:text-xl text-white/50 font-medium">
-            Software Engineer · Vienna, Austria
+            Full Stack Engineer · Vienna, Austria
           </p>
         </div>
 
         {/* ── About ── */}
-        <p className="text-base sm:text-lg text-white/60 leading-relaxed max-w-lg">
-          Living near the Austrian alps in the city of Vienna, I do software
-          development as a hobby and professionally. Mostly at home in the
-          web dev and JVM world.
-        </p>
+        <div className="text-sm sm:text-base text-white/60 leading-relaxed max-w-lg space-y-3 text-left">
+          <p>
+            I&apos;ve been obsessed with computers since my early age. What
+            started out with the simple things, like sending an E-Mail or
+            destroying the installed OS on a computer, turned into a passion for
+            life.
+          </p>
+          <p>
+            During the teenage years I went to vocational school to deepen my
+            knowledge and get a better grasp at the concept of programming and
+            how to write good, efficient code. Over the years I have learned how
+            to create my own little programs and even this website you&apos;re
+            viewing now.
+          </p>
+          <p>
+            When I&apos;m not in front of the computer hacking NASA, I like to
+            go out into nature and take pictures with my camera. I also very much
+            enjoy going to parties with friends or family.
+          </p>
+        </div>
 
         {/* ── Skills ── */}
         <div className="flex flex-wrap justify-center gap-4">
