@@ -18,8 +18,10 @@ export default function TransitionLink({
     (e: React.MouseEvent) => {
       e.preventDefault();
       if (document.startViewTransition) {
-        document.startViewTransition(() => {
+        document.startViewTransition(async () => {
           router.push(href);
+          // Give React time to flush the new route
+          await new Promise((r) => setTimeout(r, 100));
         });
       } else {
         router.push(href);

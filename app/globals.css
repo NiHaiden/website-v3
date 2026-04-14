@@ -34,37 +34,38 @@
 
 /* ── View Transitions ── */
 
+/* Let the browser morph the card shape/size automatically */
+::view-transition-old(main-card),
+::view-transition-new(main-card) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-image-pair(main-card) {
+  isolation: auto;
+}
+
+/* Smooth crossfade for the card content */
 ::view-transition-old(main-card) {
-  animation: fade-and-shrink 0.3s ease-in forwards;
+  animation: vt-fade-out 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 ::view-transition-new(main-card) {
-  animation: fade-and-grow 0.3s ease-out forwards;
+  animation: vt-fade-in 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-@keyframes fade-and-shrink {
-  to {
-    opacity: 0;
-    transform: scale(0.97);
-  }
+@keyframes vt-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
 
-@keyframes fade-and-grow {
-  from {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+@keyframes vt-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-/* Crossfade the rest of the page content */
-::view-transition-old(root) {
-  animation: none;
-}
-
+/* Keep wallpaper completely still */
+::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
 }
