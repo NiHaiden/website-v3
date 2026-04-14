@@ -47,6 +47,13 @@ const skills = [
 
 const experience = [
   {
+    period: "2025 – present",
+    role: "Part-time Student — Software Design & Cloud Computing",
+    org: "FH Joanneum",
+    orgLink: "https://www.fh-joanneum.at",
+    desc: "Studying subjects such as Mathematics for Informatics, Data Structures & Algorithms, and Informatics.",
+  },
+  {
     period: "2024 – present",
     role: "Software Engineer",
     org: "Austrian Patent Office",
@@ -148,7 +155,7 @@ export default function Home() {
             <DialogTrigger asChild>
               <button className="glass rounded-xl px-4 py-2.5 text-sm font-medium flex items-center gap-2 hover:bg-white/[0.12] transition-colors cursor-pointer">
                 <BriefcaseIcon size={16} className="text-white/50" />
-                Experience
+                My journey
               </button>
             </DialogTrigger>
             <DialogContent>
