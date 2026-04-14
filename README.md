@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# niklas.tech
+
+Personal website for Niklas Haiden — a glassmorphism one-pager built with Next.js, Tailwind CSS, and the View Transitions API.
+
+## Overview
+
+A single-screen personal card floating over a full-bleed wallpaper. The main page shows an intro, about text, skill icons, and links. **My journey** and **Projects** live on their own routes, with the glass card morphing between pages using native View Transitions.
+
+### Stack
+
+- **Next.js 16** (App Router, static export)
+- **React 19**
+- **Tailwind CSS 3** + custom glassmorphism utilities
+- **View Transitions API** for page-to-page animations
+- **Framer Motion** (available, used for animated dialog)
+- **Radix UI** primitives
+- **devicons-react** for skill icons
+
+### Routes
+
+| Route | Description |
+|------------|--------------------------------------|
+| `/` | Main overview card |
+| `/journey` | Professional timeline |
+| `/projects`| Project showcase |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Export
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+pnpm build
+```
 
-## Learn More
+Generates a static export in `out/` ready for deployment on any static host.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All rights reserved © Niklas Haiden
