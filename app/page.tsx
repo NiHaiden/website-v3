@@ -34,16 +34,16 @@ import ReactIcon from "@/components/icons/ReactIcon";
 /* ─── Data ──────────────────────────────────────────── */
 
 const skills = [
-  { name: "Java", icon: <JavaPlain size={22} color="#fff" /> },
-  { name: "React", icon: <ReactIcon size={22} color="#fff" /> },
-  { name: "TypeScript", icon: <TypescriptPlain size={22} color="#fff" /> },
-  { name: "HTML / CSS", icon: <Html5Plain size={22} color="#fff" /> },
-  { name: "Kotlin", icon: <KotlinPlain size={22} color="#fff" /> },
-  { name: "Spring", icon: <SpringIcon size={22} color="#fff" /> },
-  { name: "SQL", icon: <DatabaseIcon size={22} color="#fff" /> },
-  { name: "Tailwind", icon: <TailwindIcon size={22} color="#fff" /> },
-  { name: "Docker", icon: <DockerPlain size={22} color="#fff" /> },
-  { name: "Swift", icon: <SwiftPlain size={22} color="#fff" /> },
+  { name: "Java", icon: <JavaPlain size={32} color="#fff" /> },
+  { name: "React", icon: <ReactIcon size={32} color="#fff" /> },
+  { name: "TypeScript", icon: <TypescriptPlain size={32} color="#fff" /> },
+  { name: "HTML / CSS", icon: <Html5Plain size={32} color="#fff" /> },
+  { name: "Kotlin", icon: <KotlinPlain size={32} color="#fff" /> },
+  { name: "Spring", icon: <SpringIcon size={32} color="#fff" /> },
+  { name: "SQL", icon: <DatabaseIcon size={32} color="#fff" /> },
+  { name: "Tailwind", icon: <TailwindIcon size={32} color="#fff" /> },
+  { name: "Docker", icon: <DockerPlain size={32} color="#fff" /> },
+  { name: "Swift", icon: <SwiftPlain size={32} color="#fff" /> },
 ];
 
 const experience = [
@@ -89,7 +89,7 @@ const projects = [
 export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-10">
-      <div className="w-full max-w-2xl glass-heavy rounded-3xl p-8 sm:p-10 flex flex-col items-center text-center gap-8">
+      <div className="w-full max-w-2xl glass-heavy rounded-3xl p-10 sm:p-14 flex flex-col items-center text-center gap-10">
         {/* ── Identity ── */}
         <div className="flex flex-col items-center gap-3">
           <Image
@@ -99,31 +99,30 @@ export default function Home() {
             alt="Niklas Haiden"
             className="mb-1"
           />
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight">
             Niklas Haiden
           </h1>
-          <p className="text-base sm:text-lg text-white/50 font-medium">
+          <p className="text-lg sm:text-xl text-white/50 font-medium">
             Software Engineer · Vienna, Austria
           </p>
         </div>
 
         {/* ── About ── */}
-        <p className="text-sm sm:text-[15px] text-white/60 leading-relaxed max-w-lg">
-          I&apos;ve been building things with computers since childhood — from
-          accidentally breaking operating systems to shipping software
-          professionally. Passionate about the web, the JVM, and occasionally
-          escaping into the Austrian Alps with a camera.
+        <p className="text-base sm:text-lg text-white/60 leading-relaxed max-w-lg">
+          Living near the Austrian alps in the city of Vienna, I do software
+          development as a hobby and professionally. Mostly at home in the
+          web dev and JVM world.
         </p>
 
         {/* ── Skills ── */}
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-4">
           {skills.map((s, i) => (
             <span
               key={i}
-              className="glass-subtle rounded-lg px-3 py-1.5 text-xs sm:text-sm font-medium text-white/70 flex items-center gap-2 hover:bg-white/[0.08] hover:text-white transition-colors cursor-default"
+              title={s.name}
+              className="text-white/50 hover:text-white hover:scale-110 transition-all duration-200 cursor-default"
             >
-              <span className="opacity-60">{s.icon}</span>
-              {s.name}
+              {s.icon}
             </span>
           ))}
         </div>
