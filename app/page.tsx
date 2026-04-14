@@ -141,7 +141,7 @@ export default function Home() {
             <span
               key={i}
               title={s.name}
-              className="text-white/50 hover:text-white hover:scale-110 transition-all duration-200 cursor-default"
+              className="text-white/50 hover:text-white hover:scale-110 transition-all duration-200 cursor-default drop-shadow-[0_0_8px_rgba(64,165,254,0.4)] hover:drop-shadow-[0_0_12px_rgba(64,165,254,0.6)]"
             >
               {s.icon}
             </span>
