@@ -20,18 +20,14 @@
   }
 }
 
-/* Glass utilities */
 @layer components {
   .glass {
-    @apply backdrop-blur-2xl bg-white/[0.06] border border-white/[0.1] shadow-xl shadow-black/10;
+    @apply backdrop-blur-2xl bg-white/[0.07] border border-white/[0.12] shadow-xl shadow-black/10;
   }
   .glass-heavy {
-    @apply backdrop-blur-3xl bg-black/40 border border-white/[0.08] shadow-2xl shadow-black/20;
+    @apply backdrop-blur-3xl bg-black/40 border border-white/[0.1] shadow-2xl shadow-black/20;
   }
   .glass-subtle {
-    @apply backdrop-blur-xl bg-white/[0.04] border border-white/[0.08];
-  }
-  .divider {
-    @apply h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent;
+    @apply backdrop-blur-xl bg-white/[0.05] border border-white/[0.08];
   }
 }
