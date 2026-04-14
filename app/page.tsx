@@ -91,8 +91,8 @@ export default function Home() {
           ))}
         </div>
 
-        {/* ── Navigation ── */}
-        <div className="flex flex-wrap justify-center gap-2.5">
+        {/* ── Actions ── */}
+        <div className="flex flex-wrap justify-center items-center gap-2.5">
           <TransitionLink
             href="/journey"
             className="glass rounded-xl px-4 py-2.5 text-sm font-medium flex items-center gap-2 hover:bg-white/[0.12] transition-colors"
@@ -107,10 +107,9 @@ export default function Home() {
             <FolderOpenIcon size={16} className="text-white/50" />
             Projects
           </TransitionLink>
-        </div>
 
-        {/* ── Links ── */}
-        <div className="flex flex-wrap justify-center gap-2.5">
+          <span className="hidden sm:block w-px h-6 bg-white/10" />
+
           <a
             href="mailto:me@nhaiden.io"
             className="inline-flex items-center gap-2 bg-gradient-to-br from-sky-500 to-blue-600 px-5 py-2.5 rounded-xl text-sm font-medium shadow-lg shadow-sky-500/15 hover:shadow-sky-500/25 hover:scale-[1.02] transition-all"
