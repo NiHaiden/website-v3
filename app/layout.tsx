@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.variable} ${geistMono.variable} font-sans`}>
+        <a rel="me" href="https://hachyderm.io/@nklsdev" className="sr-only">
+          Mastodon
+        </a>
         {/* Fixed wallpaper */}
         <div className="fixed inset-0 z-0">
           <Image
